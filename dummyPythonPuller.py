@@ -6,11 +6,9 @@ SECRET = "sha1=86262701ee3d6a58a320ebac31bfc7de0cbdf9a4"
 
 @app.route('/getPull', methods = ['GET', 'POST'])
 def hello_world():
-    if(request.headers.get("X-Hub-Signature") != SECRET):
-        return redirect(404)
-    else:
-        call(['bash','myUpdateScript.sh'])
-        return 'Hello World!'
+    print("Cool..")
+    call(['bash', 'myUpdateScript.sh'])
+    return 'Hello World!'
 
 
 if __name__ == '__main__':
