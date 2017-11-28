@@ -9,7 +9,7 @@ def hello_world():
     if(request.headers.get("X-Hub-Signature") != SECRET):
         return redirect(404)
     else:
-        call(['./myUpdateScript.sh'])
+        call(['bash myUpdateScript.sh'])
         return 'Hello World!'
 
 
