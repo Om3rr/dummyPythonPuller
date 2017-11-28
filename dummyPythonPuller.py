@@ -4,7 +4,7 @@ from flask import Flask, request, session, url_for, redirect, \
 app = Flask(__name__)
 
 
-@app.route('/getPull')
+@app.route('/getPull', methods = ['GET', 'POST'])
 def hello_world():
     print(request.data)
     return 'Hello World!'
